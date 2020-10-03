@@ -17,7 +17,7 @@ def connect():
     print(result)
     while True:
     	msg = s.recv(1204)
-    	print msg
+    	print(msg)
     	smasg = raw_input("SEND MEG:")
     	s.send(smasg)
     	print "SENDING..."
