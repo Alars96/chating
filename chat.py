@@ -16,9 +16,9 @@ def connect():
     result = pyfiglet.figlet_format("WELLCOME TO THE SERVER")
     print(result)
     while True:
-    	msg = s.recv(1204)
+    	msg = s.recv(1204).decode()
     	print(msg)
-    	smasg = raw_input("SEND MEG:")
-    	s.send(smasg)
-    	print "SENDING..."
+    	smasg = input("SEND MEG:")
+    	s.send(bytes(smasg, 'utf-8'))
+    	print("SENDING...")
 connect()
